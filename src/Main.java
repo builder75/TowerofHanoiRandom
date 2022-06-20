@@ -3,10 +3,10 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Main {
-    static int count = 0;
+    static int counter = 0;
 
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stackGoal = new Stack<>();
         Stack<Integer> stack1 = new Stack<>();
         Stack<Integer> stack2 = new Stack<>();
         Stack<Integer> stack3 = new Stack<>();
@@ -17,14 +17,14 @@ public class Main {
         int numberOfDisks = scanner.nextInt();
 
         for (int i = numberOfDisks; i > 0; i--) {
-            stack.push(i);
+            stackGoal.push(i);
             stack1.push(i);
 
 
         }
 
 
-        while (!stack.equals(stack3)) {
+        while (!stackGoal.equals(stack3)) {
             double rand = Math.random();
             if (rand < 1.0 / 6 && !stack1.isEmpty()) {
                 if (!stack2.isEmpty()) {
@@ -35,7 +35,7 @@ public class Main {
 
                     stack2.push(stack1.pop());
                 }
-                count++;
+                counter++;
 
 
             } else if (rand >= 1.0 / 6 && rand < 2.0 / 6 && !stack1.isEmpty()) {
@@ -47,7 +47,7 @@ public class Main {
 
                     stack3.push(stack1.pop());
                 }
-                count++;
+                counter++;
 
             } else if (rand >= 2.0 / 6 && rand < 3.0 / 6 && !stack2.isEmpty()) {
                 if (!stack1.isEmpty()) {
@@ -58,7 +58,7 @@ public class Main {
 
                     stack1.push(stack2.pop());
                 }
-                count++;
+                counter++;
 
 
             } else if (rand >= 3.0 / 6 && rand <= 4.0 / 6 && !stack2.isEmpty()) {
@@ -70,7 +70,7 @@ public class Main {
 
                     stack3.push(stack2.pop());
                 }
-                count++;
+                counter++;
 
 
             } else if (rand >= 4.0 / 6 && rand < 5.0 / 6 && !stack3.isEmpty()) {
@@ -82,7 +82,7 @@ public class Main {
 
                     stack1.push(stack3.pop());
                 }
-                count++;
+                counter++;
 
 
             } else if (rand >= 5.0 / 6 && !stack3.isEmpty()) {
@@ -94,7 +94,7 @@ public class Main {
 
                     stack2.push(stack3.pop());
                 }
-                count++;
+                counter++;
 
 
             }
@@ -103,7 +103,7 @@ public class Main {
 
         }
         System.out.println(stack3);
-        System.out.println(count);
+        System.out.println(counter);
 
 
     }

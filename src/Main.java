@@ -93,7 +93,7 @@ public class Main {
 
             }
             counter++;
-            System.out.println(stack3);
+            System.out.println(stack1 + " " + stack2 + " " + stack3);
 
 
         }

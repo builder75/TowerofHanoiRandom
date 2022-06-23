@@ -12,7 +12,7 @@ public class Main {
         Stack<Integer> stack3 = new Stack<>();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter number of disks");
+        System.out.println("Please enter the number of disks");
 
         int numberOfDisks = scanner.nextInt();
 

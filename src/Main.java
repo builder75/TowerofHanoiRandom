@@ -97,7 +97,7 @@ public class Main {
 
 
         }
-        System.out.println(counter);
+        System.out.println("counter: " + counter);
 
 
     }

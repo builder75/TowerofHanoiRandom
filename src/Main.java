@@ -35,7 +35,6 @@ public class Main {
 
                     stack2.push(stack1.pop());
                 }
-                counter++;
 
 
             } else if (rand >= 1.0 / 6 && rand < 2.0 / 6 && !stack1.isEmpty()) {
@@ -47,7 +46,6 @@ public class Main {
 
                     stack3.push(stack1.pop());
                 }
-                counter++;
 
             } else if (rand >= 2.0 / 6 && rand < 3.0 / 6 && !stack2.isEmpty()) {
                 if (!stack1.isEmpty()) {
@@ -58,7 +56,6 @@ public class Main {
 
                     stack1.push(stack2.pop());
                 }
-                counter++;
 
 
             } else if (rand >= 3.0 / 6 && rand <= 4.0 / 6 && !stack2.isEmpty()) {
@@ -70,7 +67,6 @@ public class Main {
 
                     stack3.push(stack2.pop());
                 }
-                counter++;
 
 
             } else if (rand >= 4.0 / 6 && rand < 5.0 / 6 && !stack3.isEmpty()) {
@@ -82,7 +78,6 @@ public class Main {
 
                     stack1.push(stack3.pop());
                 }
-                counter++;
 
 
             } else if (rand >= 5.0 / 6 && !stack3.isEmpty()) {
@@ -94,15 +89,14 @@ public class Main {
 
                     stack2.push(stack3.pop());
                 }
-                counter++;
 
 
             }
+            counter++;
             System.out.println(stack3);
 
 
         }
-        System.out.println(stack3);
         System.out.println(counter);
 
 
